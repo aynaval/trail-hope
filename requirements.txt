@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+ibm-watsonx-ai
+pydantic
+dotenv
+requests
