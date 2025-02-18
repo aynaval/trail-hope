@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_ROOT_USER_ACTION=ignore \
-    PORT=8080 
+    PORT=8000 
 
 # Set a non-root user (recommended for security)
 RUN addgroup --system appgroup && adduser --system --group appuser
@@ -30,4 +30,4 @@ RUN chown -R appuser:appgroup /app
 USER appuser
 
 # Use dynamic port allocation
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
